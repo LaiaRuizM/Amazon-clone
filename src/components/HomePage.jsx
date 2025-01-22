@@ -1,12 +1,15 @@
-//1.- Overall layout of the homepage
+//1.- Overall layout of the HomePage (HP)
 //2.- Define the container on the Amzn's HomePage with arbitrary value support (min/max-w-)
-import React from "react";
+//3.- Create Carousel component and add it to the HP + add Swiper's library to implement the Carousel (npm i swiper) and import some of the Swiper functionalities
+
+import { Carousel } from "./";
 
 const HomePage = () => {
   return (
     <div className="bg-amazonclone-background">
       <div className="min-w-[1000px] max-w-[1500px] bg-purple-500 m-auto">
         Testing
+        <Carousel />
       </div>
     </div>
   );
