@@ -34,6 +34,7 @@ function Carousel() {
           <img src={"../images/carousel_5.jpg"} />
         </SwiperSlide>
       </Swiper>
+      <div className="h-[50%] bg-gradient-to-b from-stone-900" />
     </div>
   );
 }
