@@ -22,6 +22,17 @@ function Carousel() {
         <SwiperSlide>
           <img src={"../images/carousel_2.jpg"} />
         </SwiperSlide>
+        <SwiperSlide className="bg-black">
+          <video controls muted="muted">
+            <source src={"../images/carousel_vid.mp4"} type="video/mp4" />
+          </video>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={"../images/carousel_4.jpg"} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={"../images/carousel_5.jpg"} />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
