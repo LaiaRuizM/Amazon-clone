@@ -2,7 +2,7 @@
 //2.- Define the container on the Amzn's HomePage with arbitrary value support (min/max-w-)
 //3.- Create Carousel component and add it to the HP + add Swiper's library to implement the Carousel (npm i swiper) + import some of the Swiper functionalities + add some styling and config (navigation) + add feature (autoplay)
 //4.- Hop back over to the HP - to start making the content that fit on the HP (arranged in cards and they're in a grid-like fashion)
-//5.- Once we got our responsive Grid in place, we need to create some content to fill it - create a new component: HomePageCard to create a reusable card (to pass it a different title/img/link - props) and it will be able to present them on the grid
+//5.- Once we got our responsive grid in place (in HP), we need to create some content to fill it - create a new component: HomePageCard to create a reusable card (to pass it a different title/img/link - props) and it will be able to present them on the grid
 
 import { Carousel, HomePageCard } from "./";
 
@@ -13,7 +13,11 @@ const HomePage = () => {
         Testing
         <Carousel />
         <div className="grid grid-cols-3 xl:grid-cols-4">
-          <HomePageCard />
+          <HomePageCard
+            title={"We have a surprise for you"}
+            img={"../images/home_grid_1.jpg"}
+            link={"See terms and conditions"}
+          />
         </div>
       </div>
     </div>
