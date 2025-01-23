@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react"; //Swiper functionalities
-import { Navigation } from "swiper/modules"; // Navigation module
+import { Navigation, Autoplay } from "swiper/modules"; // Navigation module
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,7 +11,10 @@ function Carousel() {
         loop={true}
         spaceBetween={0}
         navigation={true}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 4500,
+        }}
         className="h-[50%]">
         <SwiperSlide>
           <img src={"../images/carousel_1.jpg"} />

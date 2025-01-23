@@ -1,6 +1,6 @@
 //1.- Overall layout of the HomePage (HP)
 //2.- Define the container on the Amzn's HomePage with arbitrary value support (min/max-w-)
-//3.- Create Carousel component and add it to the HP + add Swiper's library to implement the Carousel (npm i swiper) + import some of the Swiper functionalities + add some styling and config (navigation)
+//3.- Create Carousel component and add it to the HP + add Swiper's library to implement the Carousel (npm i swiper) + import some of the Swiper functionalities + add some styling and config (navigation) + add feature (autoplay)
 
 import { Carousel } from "./";
 
