@@ -6,9 +6,10 @@
 //6.- Create CarouselCategory component - add more content to the HP, which will involve adding carousels for some categories + add functionality/display categories
 //7.- Create CarouselProduct component - add more content to the HP, which will involve adding carousels for some products + add functionality
 //8.- Add banner to HP
-//9.- Create NavBar component (we want it to be present for any route that we go down) -> App.js, above our root + layout and structure + install icons (heroicons/react package)
+//9.- Create NavBar component (we want it to be present for any route that we go down) -> App.js, above our Route + layout and structure + install icons (heroicons/react package)
 //10.- Create Search component (search box) + functionality
 //11.- Add components to NavBar (later we'll revisit them)
+//12.- Add some navigation to our site creating three more components: Checkout, ProductPage and SearchResults
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
