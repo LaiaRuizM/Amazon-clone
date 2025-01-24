@@ -8,6 +8,7 @@
 //8.- Add banner to HP
 //9.- Create NavBar component (we want it to be present for any route that we go down) -> App.js, above our root + layout and structure + install icons (heroicons/react package)
 //10.- Create Search component (search box) + functionality
+//11.- Add components to NavBar (later we'll revisit them)
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
