@@ -3,13 +3,14 @@
 //3.- Create Carousel component and add it to the HP + add Swiper's library to implement the Carousel (npm i swiper) + import some of the Swiper functionalities + add some styling and config (navigation) + add feature (autoplay)
 //4.- Hop back over to the HP - to start making the content that fit on the HP (arranged in cards and they're in a grid-like fashion)
 //5.- Once we got our responsive grid in place (in HP), we need to create some content to fill it - create a new component: HomePageCard to create a reusable card (to pass it a different title/img/link - props) and it will be able to present them on the grid
+//6.- Create CarouselCategory component - add more content to the HP, which will involve adding carousels for some products/categories
 
-import { Carousel, HomePageCard } from "./";
+import { Carousel, HomePageCard, CarouselCategory } from "./";
 
 const HomePage = () => {
   return (
     <div className="bg-amazonclone-background">
-      <div className="min-w-[1000px] max-w-[1500px] bg-purple-500 m-auto">
+      <div className="min-w-[1000px] max-w-[1500px] m-auto">
         Testing
         <Carousel />
         <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80">
@@ -61,6 +62,7 @@ const HomePage = () => {
             />
           </div>
         </div>
+        <CarouselCategory />
       </div>
     </div>
   );
