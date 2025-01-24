@@ -6,6 +6,7 @@
 //6.- Create CarouselCategory component - add more content to the HP, which will involve adding carousels for some categories + add functionality/display categories
 //7.- Create CarouselProduct component - add more content to the HP, which will involve adding carousels for some products + add functionality
 //8.- Add banner to HP
+//9.- Create NavBar component (we want it to be present for any route that we go down) -> App.js, above our root
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
@@ -13,7 +14,6 @@ const HomePage = () => {
   return (
     <div className="bg-amazonclone-background">
       <div className="min-w-[1000px] max-w-[1500px] m-auto">
-        Testing
         <Carousel />
         <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80">
           <HomePageCard
