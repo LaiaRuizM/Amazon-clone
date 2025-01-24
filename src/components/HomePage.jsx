@@ -4,7 +4,7 @@
 //4.- Hop back over to the HP - to start making the content that fit on the HP (arranged in cards and they're in a grid-like fashion)
 //5.- Once we got our responsive grid in place (in HP), we need to create some content to fill it - create a new component: HomePageCard to create a reusable card (to pass it a different title/img/link - props) and it will be able to present them on the grid
 //6.- Create CarouselCategory component - add more content to the HP, which will involve adding carousels for some categories + add functionality/display categories
-//7.- Create CarouselProduct component - add more content to the HP, which will involve adding carousels for some products
+//7.- Create CarouselProduct component - add more content to the HP, which will involve adding carousels for some products + add functionality
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
