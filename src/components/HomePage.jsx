@@ -10,6 +10,7 @@
 //10.- Create Search component (search box) + functionality
 //11.- Add components to NavBar (later we'll revisit them)
 //12.- Add some navigation to our site creating three more components: Checkout, ProductPage and SearchResults
+//13.- add dynamic routing for ProductPage
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
