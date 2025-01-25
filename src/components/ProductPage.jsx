@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"; //retrieve id
 import { useState, useEffect } from "react";
+import { ProductDetails } from "./";
 import { callAPI } from "../utils/CallApi";
 
 const ProductPage = () => {
@@ -28,8 +29,10 @@ const ProductPage = () => {
               <img src={`${product.image}`} alt="Main product" />
             </div>
             {/* Middle */}
-            <div className="col-span-5 p-4 rounded bg-pink-400 ">
-              <div></div>
+            <div className="col-span-5 p-4 rounded bg-white divide-y divide-gray-400">
+              <div className="mb-3">
+                <ProductDetails product={product} ratings={false} />
+              </div>
               <div></div>
             </div>
             {/* Right */}
