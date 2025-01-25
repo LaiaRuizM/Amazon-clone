@@ -10,7 +10,7 @@
 //10.- Create Search component (search box) + functionality
 //11.- Add components to NavBar (later we'll revisit them)
 //12.- Add some navigation to our site creating three more components: Checkout, ProductPage and SearchResults
-//13.- add dynamic routing for ProductPage
+//13.-implement dynamic routing for ProductPage + with API integration: add functionality to PP creating an API call which the file CallApi.js (+ npm i axios) + creating the file constants.js  -- created an API utility (CallApi.js) using Axios (dependency: npm i axios) to fetch product data dynamically and centralized the BASE_URL configuration in constants.js.
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
