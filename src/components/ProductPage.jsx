@@ -18,7 +18,27 @@ const ProductPage = () => {
 
   if (!product?.title) return <h1>Loading Product ...</h1>;
 
-  return product && <div>ProductPage {product.title} </div>;
+  return (
+    product && (
+      <div className="h-screen bg-amazonclone-background">
+        <div className="min-w-[1000px] max-w-[1500px] m-auto bg-orange-400 p-4">
+          <div className="grid grid-cols-10 gap-2">
+            {/* Left */}
+            <div className="col-span-3 p-8 rounded bg-white m-auto">
+              <img src={`${product.image}`} alt="Main product" />
+            </div>
+            {/* Middle */}
+            <div className="col-span-5 p-4 rounded bg-pink-400 ">
+              <div></div>
+              <div></div>
+            </div>
+            {/* Right */}
+            <div className="col-span-2 p-4 rounded bg-green-400"></div>
+          </div>
+        </div>
+      </div>
+    )
+  );
 };
 
 export default ProductPage;
