@@ -1,4 +1,4 @@
-import React from "react";
+import { ProductBadge } from "./";
 
 const ProductDetails = ({ product, ratings }) => {
   return (
@@ -11,7 +11,9 @@ const ProductDetails = ({ product, ratings }) => {
       <div className="text-xs xl:text-sm font-bold mb-1">
         {product.attribute}
       </div>
-      <div>{product.badge}</div>
+      <div>
+        <ProductBadge badge={product.badge} />
+      </div>
     </div>
   );
 };

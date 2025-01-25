@@ -14,6 +14,7 @@
 //14.- Back to PP, before we call the API, we're going to need an object in this component (that's going to store all of the product information that gets returned from the API -> useState hook) + display data on PP
 //15.- Since we need to display a large amount of product details (on the PP), we are going to create a new component called ProductDetails. This component will be responsible for displaying the more detailed information of the product in an organized manner -> create component ProductDetails
 //16.- Back to PP: integrate ProductDetails component into it
+//17.- Create a new component ProductBadge to display dynamic badges. Integrated it into ProductDetails
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
