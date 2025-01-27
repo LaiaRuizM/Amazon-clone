@@ -15,7 +15,8 @@
 //15.- Since we need to display a large amount of product details (on the PP), we are going to create a new component called ProductDetails. This component will be responsible for displaying the more detailed information of the product in an organized manner -> create component ProductDetails
 //16.- Back to PP: integrate ProductDetails component into it
 //17.- Create a new component ProductBadge to display dynamic badges. Integrated it into ProductDetails
-//18.- Create a new component ProductRatings for displaying star ratings
+//18.- Create a new component ProductRatings for displaying star ratings. Integrated it into ProductDetails
+//19.- Update ProductDetails
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
