@@ -17,6 +17,7 @@
 //17.- Create a new component ProductBadge to display dynamic badges. Integrated it into ProductDetails
 //18.- Create a new component ProductRatings for displaying star ratings. Integrated it into ProductDetails
 //19.- Update ProductDetails
+//20.- Go back to ProductPage(PP):
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
