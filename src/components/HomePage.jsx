@@ -17,7 +17,8 @@
 //17.- Create a new component ProductBadge to display dynamic badges. Integrated it into ProductDetails
 //18.- Create a new component ProductRatings for displaying star ratings. Integrated it into ProductDetails
 //19.- Update ProductDetails
-//20.- Go back to ProductPage(PP): enhance PP layout with pricing and quantity selection + define a way to display/formatting the price (constants.js) +
+//20.- Go back to ProductPage(PP): enhance PP layout with pricing and quantity selection + define a way to display/formatting the price (constants.js) + integrate US currency formatting and update PP layout
+//21.- Hit the Amazon logo and be taken back to the HomePage & hit the cart icon and go back to the Checkout
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
