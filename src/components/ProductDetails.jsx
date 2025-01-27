@@ -1,4 +1,4 @@
-import { ProductBadge } from "./";
+import { ProductBadge, ProductRatings } from "./";
 
 const ProductDetails = ({ product, ratings }) => {
   return (
@@ -7,7 +7,15 @@ const ProductDetails = ({ product, ratings }) => {
         {product.title}
       </div>
       <div className="text-sm xl:text-base mb-1">{product.brand}</div>
-      <div className="text-sm xl:text-base mb-1">{product.avgRating}</div>
+      {ratings && (
+        <div className="text-sm xl:text-base mb-1">
+          {" "}
+          <ProductRatings
+            avgRating={product.avgRating}
+            ratings={product.ratings}
+          />
+        </div>
+      )}
       <div className="text-xs xl:text-sm font-bold mb-1">
         {product.attribute}
       </div>
