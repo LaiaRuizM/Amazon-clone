@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"; //retrieve id
 import { useState, useEffect } from "react";
 import { ProductDetails } from "./";
+import { US_CURRENCY } from "../utils/constants";
 import { callAPI } from "../utils/CallApi";
 
 const ProductPage = () => {
