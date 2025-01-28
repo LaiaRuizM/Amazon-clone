@@ -1,6 +1,21 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { useState, useEffect } from "react";
+
+import { callAPI } from "../utils/CallApi";
 
 const Search = () => {
+  const [suggestions, setSuggestions] = useState(null);
+
+  const getSuggestions = () => {
+    callAPI(`data/suggestions.json`).then(suggestionResults => {
+      setSuggestions(suggestionResults);
+    });
+  };
+
+  useEffect(() => {
+    getSuggestions();
+  }, []);
+
   return (
     <div className="w-[100%]">
       <div className="flex items-center h-10 bg-amazonclone-yellow rounded">
@@ -21,6 +36,7 @@ const Search = () => {
           <MagnifyingGlassIcon className="h-[27px] m-auto stroke-slate-900" />
         </button>
       </div>
+      {suggestions && <div></div>}
     </div>
   );
 };
