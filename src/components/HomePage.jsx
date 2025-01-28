@@ -19,7 +19,8 @@
 //19.- Update ProductDetails
 //20.- Go back to ProductPage(PP): enhance PP layout with pricing and quantity selection + define a way to display/formatting the price (constants.js) + integrate US currency formatting and update PP layout
 //21.- Hit the Amazon logo and be taken back to the HomePage & hit the cart icon and go back to the Checkout on NavBar
-//22.- Add/implement these functionalities on Search component: Implement dynamic search suggestions on user's input + add controlled input for search bar + filtering the suggestions we have based on the user's input + storing the currently selected category + implement the clicking of the search button which kicks off a search
+//22.- Add/implement these functionalities on Search component: Implement dynamic search suggestions on user's input + add controlled input for search bar + filtering the suggestions we have based on the user's input + storing the currently selected category + implement the clicking of the search button which kicks off a search and go back to SearchResults component
+//23.- In this SearchResults component: extract the search params that we've just built in the Search component
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
