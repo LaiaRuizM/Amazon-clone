@@ -23,7 +23,7 @@
 //23.- In this SearchResults component: extract the search params that we've just built in the Search component (fetch and display search results)
 //24.- Add more functionality to the CarouselCategory component: add category filter navigation
 //25.- Create the final page which is Checkout: We're going to be implementing a state management tool called Redux. We're going to share the state between components by passing in props (store.js)
-//26.- We want to control our shopping cart behaviour and what Redux allows us to do is divide up different areas of our state into something they call Slices, so we can have slices for each part of our state, so we're going to have a cart slice that's going to deal with our shopping cart (cartSlice.js) + create the outline of the cartSlice and add some reducers
+//26.- We want to control our shopping cart behaviour and what Redux allows us to do is divide up different areas of our state into something they call Slices, so we can have slices for each part of our state, so we're going to have a cart slice that's going to deal with our shopping cart (cartSlice.js) + create the outline of the cartSlice and add some reducers + define some actions (which are the things that we call in the UI which will eventually come to the reducers and then, we can take the appropriate action) + let the store.js know about the cartSlice
 
 import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
