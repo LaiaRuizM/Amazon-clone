@@ -6,6 +6,7 @@ import { callAPI } from "../utils/CallApi";
 const Search = () => {
   const [suggestions, setSuggestions] = useState(null); //Dynamic search suggestions
   const [searchTerm, setSearchTerm] = useState(""); //Capture the search term as the user is typing
+  const [category, setCategory] = useState("All"); //Storing the currently selected category for keeping track of it
 
   const getSuggestions = () => {
     callAPI(`data/suggestions.json`).then(suggestionResults => {
@@ -20,7 +21,9 @@ const Search = () => {
   return (
     <div className="w-[100%]">
       <div className="flex items-center h-10 bg-amazonclone-yellow rounded">
-        <select className="p-2 bg-gray-300 text-black border text-xs xl:text-sm">
+        <select
+          onChange={e => setCategory(e.target.value)}
+          className="p-2 bg-gray-300 text-black border text-xs xl:text-sm">
           <option>All</option>
           <option>Deals</option>
           <option>Amazon</option>
