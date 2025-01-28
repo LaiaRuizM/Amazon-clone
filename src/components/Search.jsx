@@ -1,5 +1,6 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
+import { useNavigate, createSearchParams } from "react-router-dom";
 
 import { callAPI } from "../utils/CallApi";
 
@@ -7,6 +8,24 @@ const Search = () => {
   const [suggestions, setSuggestions] = useState(null); //Dynamic search suggestions
   const [searchTerm, setSearchTerm] = useState(""); //Capture the search term as the user is typing
   const [category, setCategory] = useState("All"); //Storing the currently selected category for keeping track of it
+  const navigate = useNavigate();
+
+  const onHandleSubmit = e => {
+    e.preventDefault();
+
+    navigate({
+      //This will define where we're moving to and it's also going to allow us to take some special parameters
+      pathname: "search",
+      search: `${createSearchParams({
+        //This is going to allow us to build some search params that we're going to pass onto our SearchResults component
+        category: `${category}`,
+        searchTerm: `${searchTerm}`,
+      })}`,
+    });
+
+    setSearchTerm("");
+    setCategory("All");
+  };
 
   const getSuggestions = () => {
     callAPI(`data/suggestions.json`).then(suggestionResults => {
@@ -38,7 +57,7 @@ const Search = () => {
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         />
-        <button className="w-[45px]">
+        <button onClick={onHandleSubmit} className="w-[45px]">
           <MagnifyingGlassIcon className="h-[27px] m-auto stroke-slate-900" />
         </button>
       </div>
