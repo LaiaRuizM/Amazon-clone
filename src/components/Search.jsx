@@ -5,7 +5,7 @@ import { callAPI } from "../utils/CallApi";
 
 const Search = () => {
   const [suggestions, setSuggestions] = useState(null); //Dynamic search suggestions
-  const [searchTerm, setSearchTerm] = useState("Something"); //Capture the search term as the user is typing
+  const [searchTerm, setSearchTerm] = useState(""); //Capture the search term as the user is typing
 
   const getSuggestions = () => {
     callAPI(`data/suggestions.json`).then(suggestionResults => {
@@ -39,7 +39,33 @@ const Search = () => {
           <MagnifyingGlassIcon className="h-[27px] m-auto stroke-slate-900" />
         </button>
       </div>
-      {suggestions && <div></div>}
+      {suggestions && (
+        <div className="bg-white text-black w-full z-40 absolute">
+          {suggestions
+            .filter(suggestion => {
+              const currentSearchTerm = searchTerm.toLowerCase(); //Retrieve the search term
+              const title = suggestion.title.toLowerCase(); // Extract the title from the current suggestion and convert it to lowercase for case-insensitive comparison
+              return (
+                currentSearchTerm &&
+                title.startsWith(currentSearchTerm) &&
+                title !== currentSearchTerm //Exclude suggestions that are an exact match with the search term: ["apple", "apple pie", "apple juice"] -> "apple pie" and "apple juice" are filtered in. "apple" is excluded because it matches exactly.
+              );
+            })
+            .slice(0, 10) //Return the first ten elements
+            .map(
+              (
+                suggestion //Render each suggestion as a clickable div with its title
+              ) => (
+                <div
+                  key={suggestion.id}
+                  //Set the clicked suggestion as the new search term:
+                  onClick={() => setSearchTerm(suggestion.title)}>
+                  {suggestion.title}
+                </div>
+              )
+            )}
+        </div>
+      )}
     </div>
   );
 };
