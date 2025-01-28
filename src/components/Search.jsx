@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { callAPI } from "../utils/CallApi";
 
 const Search = () => {
-  const [suggestions, setSuggestions] = useState(null);
+  const [suggestions, setSuggestions] = useState(null); //Dynamic search suggestions
+  const [searchTerm, setSearchTerm] = useState("Something"); //Capture the search term as the user is typing
 
   const getSuggestions = () => {
     callAPI(`data/suggestions.json`).then(suggestionResults => {
@@ -31,6 +32,8 @@ const Search = () => {
         <input
           className="flex grow items-center h-[100%] rounded-l text-black"
           type="text"
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
         />
         <button className="w-[45px]">
           <MagnifyingGlassIcon className="h-[27px] m-auto stroke-slate-900" />
